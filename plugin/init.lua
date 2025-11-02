@@ -1,23 +1,24 @@
 --[[
-About his Plugin:
-- It does the following:
-    - Access "directory" to get the paths of all image files and stores them in
-      wezterm.GLOBAL.images. Its default to $HOME/Pictures/Wallpapers/ but you can
-      specify directory of your preference.
-    - Randomly chooses an image from wezterm.GLOBAL.images and displays it as
-      a wallpaper by appyling it to config.background.
-    - The image index is stored in wezterm.GLOBAL.image_index.
-    - The image brightness is stored in wezterm.GLOBAL.brightness.
-    - Let you toggle the wallpaper choice forward and backward using Super+b and Super+Shift+B,
-      and updates wezterm.GLOBAL.image_index.
-    - Let you brighten and dim the wallpaper using Super+Alt+b and Super+Alt+B and
-      updates wezterm.GLOBAL.brightness.
--- Special thanks to @bew for advices/guidance during initial development.
+This Plugin does the following:
+  - Lets Wezterm access your wallpaper "directory" to store the paths of all its image files in
+    wezterm.GLOBAL.images. "directory" default to $HOME/Pictures/Wallpapers/ but you can
+    specify a directory of your preference.
+  - Randomly chooses a image from wezterm.GLOBAL.images and displays it as a wallpaper in
+    Wezterm by appyling it to config.background.
+  - This image index is stored in wezterm.GLOBAL.image_index.
+  - This image brightness is stored in wezterm.GLOBAL.brightness.
+  - Lets you toggle the wallpaper choice forward and backward using Super+b and Super+Shift+B,
+    and updates wezterm.GLOBAL.image_index.
+  - Let you brighten and dim the wallpaper using Super+Alt+b and Super+Alt+B and
+    updates wezterm.GLOBAL.brightness.
+- Special thanks to @bew for advices/guidance during initial development.
+
+Written by: sunbearc22
+Tested on: Ubuntu 24.04.3, wezterm 20251025-070338-b6e75fd7
 ]]
 local M = {}
 
 local wezterm = require("wezterm")
-
 
 ---@param config unknown
 ---@param opts {
@@ -106,7 +107,7 @@ function M.apply_to_config(config, opts)
         wezterm.GLOBAL.image_index = #wezterm.GLOBAL.images
       end
     else
-      wezterm.error("arg: direction is not defined.")
+      wezterm.error("[WALLPAPERS] arg: direction is not defined.")
     end
     local new_index = wezterm.GLOBAL.image_index
     local new_image = wezterm.GLOBAL.images[new_index]
