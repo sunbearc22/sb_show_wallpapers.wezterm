@@ -62,3 +62,11 @@ Change them to your preference.
 | <kbd>SUPER</kbd><kbd>ALT</kbd><kbd>b</kbd>  | Increase brightness by 2% |
 | <kbd>SUPER</kbd><kbd>ALT</kbd><kbd>SHIFT</kbd><kbd>B</kbd> | Decrease brightness by 2% |
 
+## Update
+
+Press <kbd>CTRL</kbd><kbd>SHIFT</kbd><kbd>L</kbd> and run `wezterm.plugin.update_all()`.
+
+## Removal
+
+1. Press <kbd>CTRL</kbd><kbd>SHIFT</kbd><kbd>L</kbd> and run `wezterm.plugin.list()`.
+2. Delete the `"plugin_dir"` directory of this plugin.
