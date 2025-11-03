@@ -1,4 +1,4 @@
-# show_wallpapers.wezterm
+# sb_show_wallpapers.wezterm
 - Shows your wallpapers in WezTerm and lets you toggle their change forward and backward.
 ![toggle_wallpapers](images/toggle_wallpapers.gif)
 
@@ -17,7 +17,7 @@ if wezterm.config_builder then
 end
 
 -- Add these lines (to use plugin and its default options):
-swp = wezterm.plugin.require("https://github.com/sunbearc22/show_wallpapers.wezterm.git")
+swp = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
 swp.apply_to_config(config, {})
 
 return config
@@ -28,7 +28,7 @@ return config
 **Default options**
 
 ```lua
-swp = wezterm.plugin.require("https://github.com/sunbearc22/show_wallpapers.wezterm.git")
+swp = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
 swp.apply_to_config(config,
   {
     directory = "$HOME/Pictures/Wallpapers",        -- Wallpapers directory
@@ -61,5 +61,4 @@ Change them to your preference.
 | :----- | :----- |
 | <kbd>SUPER</kbd><kbd>ALT</kbd><kbd>b</kbd>  | Increase brightness by 2% |
 | <kbd>SUPER</kbd><kbd>ALT</kbd><kbd>SHIFT</kbd><kbd>B</kbd> | Decrease brightness by 2% |
-
 
