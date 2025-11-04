@@ -44,7 +44,7 @@ wallpapers.apply_to_config(config,
   }
 )
 ```
-Change them to your preference.
+Change the value of these option fields to your preference.
 
 ## Key Bindings
 
