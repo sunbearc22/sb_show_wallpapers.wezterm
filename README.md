@@ -17,8 +17,8 @@ if wezterm.config_builder then
 end
 
 -- Add these lines (to use plugin and its default options):
-swp = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
-swp.apply_to_config(config, {})
+wallpapers = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
+wallpapers.apply_to_config(config, {})
 
 return config
 ```
@@ -28,8 +28,8 @@ return config
 **Default options**
 
 ```lua
-swp = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
-swp.apply_to_config(config,
+wallpapers = wezterm.plugin.require("https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git")
+wallpapers.apply_to_config(config,
   {
     directory = "$HOME/Pictures/Wallpapers",        -- Wallpapers directory
     brightness = 0.06,                              -- Wallpaper initial brightness at 6%.
