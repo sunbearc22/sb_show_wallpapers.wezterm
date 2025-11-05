@@ -5,7 +5,7 @@
 - Lets you brighten and dim the wallpaper.
 ![toggle_brightness](images/toggle_brightness.gif)
 
-## Usage
+## Installation & Usage
 
 ```lua
 local wezterm = require("wezterm")
@@ -16,7 +16,7 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
--- Add these lines (to use plugin and its default options):
+-- Add these lines (to install & use plugin and its default options):
 local repo = "https://github.com/sunbearc22/sb_show_wallpapers.wezterm.git"
 wezterm.plugin.require(repo).apply_to_config(config, {})
 
